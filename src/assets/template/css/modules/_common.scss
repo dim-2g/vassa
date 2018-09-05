@@ -208,3 +208,34 @@ a{
     margin-top: 3px;
   }
 }
+
+.caption{
+  font-size: 24px;
+  font-family: FuturaFuturisCBold;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  position: relative;
+  margin-bottom: 20px;
+  &:after{
+    background: linear-gradient(90deg, #b3071b 0%, #008a9b 100%);
+    width: 76px;
+    height: 6px;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    margin-left: -38px;
+  }
+}
+.subcaption{
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.samples{
+  padding: 30px 0;
+}
