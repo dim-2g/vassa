@@ -1,0 +1,30 @@
+.baner-cart{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    padding: 35px 0;
+    @media ($bp-larger-than-phablet ) {
+        height: 372px;
+        padding: 136px 0;
+    }
+    &__caption{
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: bold;
+        color: #fff;
+        margin-bottom: 10px;
+        line-height: 120%;
+    }
+    &__info{
+        text-transform: uppercase;
+        font-size: 18px;
+        color: #fff;
+    }
+}
+.white-cart{
+    background-color: #fff;
+    height: 30px;
+}

@@ -1,0 +1,223 @@
+
+/*font-family: 'Arimo', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+
+
+.row__content{
+  //margin-left: -8px;
+  //margin-right: -8px;
+}
+.sidebar{
+  padding: 0 20px;
+  margin-bottom: 15px;
+  @media ($bp-larger-than-mobile ) {
+    padding: 0;
+    width: 288px;
+  }
+  @media ($bp-larger-than-desktop ) {
+    padding: 0 8px;
+    display: block;
+    width: 25%;
+  }
+  >*{
+    display: none;
+    @media ($bp-larger-than-desktop ) {
+      display: block;
+    }
+  }
+  &__caption{
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #3a3a3a;
+    position: relative;
+    @media ($bp-larger-than-desktop ) {
+      margin-bottom: 15px;
+    }
+
+  }
+  &__inner{
+    background-color: #fff;
+    padding: 17px 27px 12px 17px;
+    margin-bottom: 15px;
+  }
+  &.open{
+    position: relative;
+    z-index: 2;
+    .show-mobile{
+      display: block;
+      &.sidebar__inner{
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.23);
+        padding-top: 50px;
+        top: 0px;
+        min-width: 275px;
+      }
+      &.aside-filter{
+        position: absolute;
+        background-color: #fff;
+        box-shadow: 2px 2px 5px 0 rgba(0,0,0,0.23);
+        padding-top: 50px;
+        top: 0px;
+        min-width: 275px;
+      }
+    }
+    .hidden-mobile{
+      display: none;
+    }
+    .sidebar-btn{
+      &:after{
+        transform: rotate(90deg);
+      }
+    }
+  }
+}
+.sidebar-btn{
+  display: block;
+  position: relative;
+  z-index: 205;
+  padding: 8px 15px;
+  text-transform: uppercase;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  color: #3a3a3a;
+  background-color: #fff;
+  text-decoration: none;
+  @media ($bp-larger-than-desktop ) {
+    display: none;
+  }
+  &:after{
+    display: inline-block;
+    @include sprite($sidebar-right-arrow);
+    content: "";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    margin-top: -8px;
+    transition: $anim;
+  }
+}
+.content{
+  width: 100%;
+
+  @media ($bp-larger-than-desktop ) {
+    width: 75%;
+    padding: 0 8px;
+  }
+  &__inner{
+    background-color: #fff;
+    padding: 5px 20px 20px 20px;
+    margin-bottom: 42px;
+    //margin-left: -20px;
+    //margin-right: -20px;
+    @media ($bp-larger-than-mobile) {
+      //margin-left: 0;
+      //margin-right: 0;
+      padding: 5px 32px 50px 32px;
+    }
+    p{
+      font-family: "Open Sans", sans-serif;
+      font-size: 13px;
+      color: #777777;
+      line-height: 167%;
+      margin-bottom: 17px;
+    }
+  }
+  &__text{
+    margin-bottom: 40px;
+  }
+  h1{
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #373737;
+    text-align: center;
+    font-weight: normal;
+  }
+}
+.sidebar-menu{
+  list-style-type: none;
+  li{
+    padding: 0;
+    margin-bottom: 4px;
+    &.active{
+      a{
+        background-color: #eeeeee;
+        &:after{
+          border: 20px solid transparent;
+          border-left: 20px solid #eeeeee;
+          position: absolute;
+          left: 100%;
+          top: 0;
+          content: "";
+          display: inline-block;
+        }
+      }
+    }
+    &.sidebar-menu__item{
+        font-size: 13px;
+        color: #787878;
+        padding: 1px 17px;
+      height: 40px;
+      line-height: 36px;
+    }
+    a{
+      display: block;
+      padding: 1px 17px;
+      font-size: 14px;
+      color: #3a3a3a;
+      text-decoration: none;
+      position: relative;
+      height: 40px;
+      line-height: 36px;
+      span{
+        vertical-align: middle;
+        line-height: 100%;
+        display: inline-block;
+      }
+      &:hover{
+        background-color: #eeeeee;
+        &:after{
+          border: 20px solid transparent;
+          border-left: 20px solid #eeeeee;
+          position: absolute;
+          left: 100%;
+          top: 0;
+          content: "";
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+.sidebar-search{
+  background-color: #fff;
+  padding: 23px 20px 25px 16px;
+  position: relative;
+  input{
+    height: 39px;
+    padding: 6px 18px;
+  }
+  &__input{
+    width: 100%;
+    font-size: 13px;
+    color: #373737;
+
+  }
+  &__submit{
+    position: absolute;
+    top: 8px;
+    right: 27px;
+    bottom: 1px;
+    padding: 0;
+    background-color: transparent;
+    border: 0 none;
+    &:before{
+      content: "";
+      display: inline-block;
+      @include sprite($search);
+    }
+  }
+}
+

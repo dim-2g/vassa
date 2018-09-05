@@ -1,0 +1,167 @@
+.search{
+  background-color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.search-btn{
+  background-color: #fff;
+  padding: 23px 26px 23px 26px;
+  position: relative;
+  margin-bottom: 16px;
+  height: 84px;
+  display: none;
+  &__box{
+    padding-right: 154px;
+    position: relative;
+  }
+  input{
+    height: 39px;
+    padding: 6px 18px;
+  }
+  @media ($bp-larger-than-tablet ) {
+    display: block;
+  }
+  &__input{
+    width: 100%;
+    font-size: 13px;
+    color: #373737;
+    position: relative;
+  }
+  &__submit{
+    font-size: 14px;
+    color: #fff;
+    background-color: #0088aa;
+    width: 136px;
+    height: 38px;
+    text-align: center;
+    display: inline-block;
+    line-height: 35px;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+.search-panel{
+  padding: 18px 0 0;
+  border-bottom: 1px solid #d3d3d3;
+  margin-bottom: 16px;
+  &__caption{
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #373737;
+    margin-bottom: 20px;
+  }
+  &__dual{
+    position: relative;
+  }
+  &__pagination{
+    float: left;
+    //height: 40px;
+    &-label{
+      float: left;
+      font-size: 13px;
+      color: #9c9c9c;
+      margin-right: 35px;
+      margin-bottom: 25px;
+      @media($bp-larger-than-phablet){
+        margin-bottom: 0;
+      }
+    }
+    &-count{
+      color: #373737;
+      margin-left: 2px;
+    }
+  }
+  .pagination__prev,
+  .pagination__next{
+    position: relative;
+    display: inline-block;
+    span,a{
+      font-size: 0;
+    }
+    &.control{
+      span,a{
+        font-size: 0;
+      }
+    }
+  }
+  &__box {
+    float: right;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    @media($bp-larger-than-phablet){
+      top: auto;
+      right: auto;
+      position: relative;
+    }
+    .selectric {
+      border: 1px solid #dadada;
+      background-color: #fff;
+      border-radius: 0;
+      height: 27px;
+      p {
+        line-height: 12px;
+      }
+      b {
+        line-height: 15px;
+        height: 27px;
+      }
+      .label {
+        font-size: 12px;
+        color: #9c9c9c;
+        padding-left: 7px;
+        padding-right: 14px;
+      }
+      .button {
+        &:after {
+          border: 0 none;
+          content: "";
+          @include sprite($icon-down-dark);
+        }
+      }
+    }
+    .selectricOpen{
+      .selectric{
+        background-color: #fff;
+      }
+    }
+    .selectricItems li{
+      background-color: #fff;
+      font-size: 13px;
+      text-align: left;
+      &:hover{
+        background-color: $blue;
+        color: #fff;
+      }
+    }
+    .selectricWrapper{
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      width: 68px;
+      &.selectric{
+        border: 0 none;
+      }
+    }
+  }
+  &__label{
+    float: left;
+    font-size: 13px;
+    color: #9c9c9c;
+    margin-right: 13px;
+    margin-top: 2px;
+  }
+  &__paginat{
+    float: left;
+  }
+  &__list{
+    margin-left: -7x;
+    margin-right: -7px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d3d3d3;
+    margin-bottom: 36px;
+  }
+}

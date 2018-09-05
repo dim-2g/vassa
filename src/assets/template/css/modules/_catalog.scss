@@ -1,0 +1,231 @@
+.catalog{
+  &__list{
+    padding-bottom: 40px;
+    border-bottom: 1px solid #d3d3d3;
+    margin-bottom: 37px;
+    @media ($bp-larger-than-mobile ) {
+      margin-left: -6px;
+      margin-right: -6px;
+    }
+  }
+  &__item{
+    width: 33%;
+    padding: 0 6px;
+    margin-bottom: 6px;
+  }
+  &__text-bottom{
+    background-color: #fff;
+    padding: 18px 20px 35px 20px;
+    margin-bottom: 42px;
+    @media ($bp-larger-than-mobile ) {
+      padding: 18px 35px 35px 35px;
+    }
+    p{
+      font-size: 13px;
+      color: #787878;
+      line-height: 170%;
+      margin-bottom: 16px;
+    }
+  }
+}
+.catalog-card{
+  border: 1px solid #d3d3d3;
+  max-width: 350px;
+  width: 100%;
+  margin: 0 0 12px 0;
+  @media ($bp-larger-than-mobile ) {
+    width: 275px;
+    margin: 0 6px 12px 6px;
+    float: left;
+  }
+  &__top{
+    padding: 15px;
+  }
+  &__image-box{
+    text-align: center;
+    height: 130px;
+    line-height: 130px;
+  }
+  &__name{
+    text-align: center;
+    color: #0088aa;
+    font-size: 16px;
+    height: 42px;
+    line-height: 42px;
+    span{
+      vertical-align: middle;
+      line-height: 100%;
+      display: inline-block;
+    }
+  }
+  &__bottom{
+    background-color: #eeeeee;
+    padding: 15px 8px;
+    height: 100px;
+
+    .priceline{
+      margin-bottom: 10px;
+      &__key{
+        vertical-align: top;
+        padding-top: 3px;
+        display: inline-block;
+      }
+      &__value{
+        font-weight: bold;
+        font-size: 20px;
+        color: #373737;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+
+  }
+  .quontity{
+    float: left;
+  }
+  &__submit{
+    float: right;
+    font-size: 13px;
+    color: #fff;
+    background-color: #0088aa;
+    width: 147px;
+    height: 33px;
+    border-radius: 20px;
+    text-align: center;
+    display: inline-block;
+    line-height: 33px;
+    &:hover{
+      //color: #373737;
+    }
+  }
+}
+.catalog-line{
+  color: #373737;
+  &__value{
+    color: #787878;
+  }
+}
+
+.sortpanel{
+  padding: 5px 0 15px;
+  border-bottom: 1px solid #d3d3d3;
+  margin-bottom: 24px;
+
+  &__box{
+    float: right;
+    text-align: right;
+  }
+  &__label{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 13px;
+    vertical-align: middle;
+  }
+  &__list{
+    display: inline-block;
+    width: 21px;
+    height: 19px;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 10px;
+    &:before {
+      content: "";
+      @include sprite($list);
+      display: inline-block;
+    }
+    &.active{
+      &:before{
+        @include sprite($list-active);
+      }
+    }
+    &:hover{
+      &:before{
+        @include sprite($list-active);
+      }
+    }
+  }
+  &__grid{
+    display: inline-block;
+    width: 21px;
+    height: 19px;
+    position: relative;
+    vertical-align: middle;
+    &:before {
+      content: "";
+      @include sprite($grid);
+      display: inline-block;
+    }
+    &.active{
+      &:before{
+        @include sprite($grid-active);
+      }
+    }
+    &:hover{
+      &:before{
+        @include sprite($grid-active);
+      }
+    }
+  }
+}
+
+.aside-filter{
+  .selectric{
+    border: 0;
+    background-color: #fff;
+    border-radius: 0;
+    height: 38px;
+    p{
+      line-height: 23px;
+    }
+    b{
+      line-height: 23px;
+      height: 38px;
+    }
+    .label{
+      font-size: 13px;
+      color: #9c9c9c;
+    }
+    .button{
+      &:after{
+        border: 0 none;
+        content: "";
+        @include sprite($icon-down-dark);
+      }
+    }
+  }
+  .selectricOpen{
+    .selectric{
+      background-color: #fff;
+    }
+  }
+  .selectricItems li{
+    background-color: #fff;
+    font-size: 14px;
+    &:hover{
+      background-color: $blue;
+      color: #fff;
+    }
+    &.selected{
+
+    }
+  }
+  .selectricWrapper{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    width: 100%;
+    .selectric{
+      border: 1px solid #dadada;
+    }
+  }
+}
+.checkbox-custom,
+.radio-custom,
+.label .register__textsmall{
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  color: #9c9c9c;
+  font-size: 13px;
+  font-weight: normal;
+}
