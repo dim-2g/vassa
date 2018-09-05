@@ -9,22 +9,55 @@
 //
 // At the bottom of this section, we provide information about the spritesheet itself
 // $spritesheet: width height image $spritesheet-sprites;
+$predlog-1-name: 'predlog-1';
+$predlog-1-x: 99px;
+$predlog-1-y: 0px;
+$predlog-1-offset-x: -99px;
+$predlog-1-offset-y: 0px;
+$predlog-1-width: 40px;
+$predlog-1-height: 47px;
+$predlog-1-total-width: 139px;
+$predlog-1-total-height: 94px;
+$predlog-1-image: '/assets/template/css/sprites/sprite.png';
+$predlog-1: (99px, 0px, -99px, 0px, 40px, 47px, 139px, 94px, '/assets/template/css/sprites/sprite.png', 'predlog-1', );
+$predlog-2-name: 'predlog-2';
+$predlog-2-x: 0px;
+$predlog-2-y: 0px;
+$predlog-2-offset-x: 0px;
+$predlog-2-offset-y: 0px;
+$predlog-2-width: 50px;
+$predlog-2-height: 50px;
+$predlog-2-total-width: 139px;
+$predlog-2-total-height: 94px;
+$predlog-2-image: '/assets/template/css/sprites/sprite.png';
+$predlog-2: (0px, 0px, 0px, 0px, 50px, 50px, 139px, 94px, '/assets/template/css/sprites/sprite.png', 'predlog-2', );
+$predlog-3-name: 'predlog-3';
+$predlog-3-x: 50px;
+$predlog-3-y: 0px;
+$predlog-3-offset-x: -50px;
+$predlog-3-offset-y: 0px;
+$predlog-3-width: 49px;
+$predlog-3-height: 50px;
+$predlog-3-total-width: 139px;
+$predlog-3-total-height: 94px;
+$predlog-3-image: '/assets/template/css/sprites/sprite.png';
+$predlog-3: (50px, 0px, -50px, 0px, 49px, 50px, 139px, 94px, '/assets/template/css/sprites/sprite.png', 'predlog-3', );
 $zvonokh-name: 'zvonokh';
 $zvonokh-x: 0px;
-$zvonokh-y: 0px;
+$zvonokh-y: 50px;
 $zvonokh-offset-x: 0px;
-$zvonokh-offset-y: 0px;
+$zvonokh-offset-y: -50px;
 $zvonokh-width: 44px;
 $zvonokh-height: 44px;
-$zvonokh-total-width: 44px;
-$zvonokh-total-height: 44px;
+$zvonokh-total-width: 139px;
+$zvonokh-total-height: 94px;
 $zvonokh-image: '/assets/template/css/sprites/sprite.png';
-$zvonokh: (0px, 0px, 0px, 0px, 44px, 44px, 44px, 44px, '/assets/template/css/sprites/sprite.png', 'zvonokh', );
-$spritesheet-width: 44px;
-$spritesheet-height: 44px;
+$zvonokh: (0px, 50px, 0px, -50px, 44px, 44px, 139px, 94px, '/assets/template/css/sprites/sprite.png', 'zvonokh', );
+$spritesheet-width: 139px;
+$spritesheet-height: 94px;
 $spritesheet-image: '/assets/template/css/sprites/sprite.png';
-$spritesheet-sprites: ($zvonokh, );
-$spritesheet: (44px, 44px, '/assets/template/css/sprites/sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($predlog-1, $predlog-2, $predlog-3, $zvonokh, );
+$spritesheet: (139px, 94px, '/assets/template/css/sprites/sprite.png', $spritesheet-sprites, );
 
 // The provided mixins are intended to be used with the array-like variables
 //

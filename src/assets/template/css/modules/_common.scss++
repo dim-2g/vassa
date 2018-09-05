@@ -6,34 +6,9 @@ body *{
   box-sizing: border-box;
   font-family: Tahoma, sans-serif;
 }
-
-.container{
-  padding: 0 15px;
-}
-.in-mobile{
-  display: inline-block;
-  @media($bp-larger-than-mobile) {
-    display: none;
-  }
-}
-.in-desktop{
-  display: none;
-  @media($bp-larger-than-mobile) {
-    display: inline-block;
-  }
-}
-p{
-  line-height: 150%;
-  margin: 16px 0;
-  font-size: 14px;
-}
 a{
-  color: $biruza;
   outline: none;
 }
-
-
-
 .header{
   min-height: 600px;
   position: relative;
@@ -199,47 +174,35 @@ a{
     border: 1px solid $red;
     background: #fff;
     color: $red;
-    transition: $anim;
-    span:before{
-      transition: $anim;
+    &:before{
       background-color: $red;
     }
   }
   &--arrow{
-    text-align: center;
-    padding: 0 30px;
-    height: 47px;
-    line-height: 46px;
-    transition: $anim;
-    span{
-      position: relative;
-      padding-right: 42px;
-      text-align: left;
-      &:after{
-        content: "\f105";
-        display: inline-block;
-        font-family: FontAwesome;
-        position: absolute;
-        font-size: 13px;
-        right: 0px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: $anim;
-      }
-      &:before{
-        content: "";
-        display: inline-block;
-        width: 18px;
-        height: 1px;
-        background-color: #fff;
-        position: absolute;
-        right: 2px;
-        top: 50%;
-        transform: translateY(-50%);
-        transition: $anim;
-      }
+    padding-right: 72px;
+    position: relative;
+    &:after{
+      content: "\f105";
+      display: inline-block;
+      font-family: FontAwesome;
+      position: absolute;
+      font-size: 13px;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: $anim;
     }
-
+    &:before{
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 1px;
+      background-color: #fff;
+      position: absolute;
+      right: 32px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
   &__all-works{
     margin-top: 3px;
@@ -247,7 +210,7 @@ a{
 }
 
 .caption{
-  font-size: 16px;
+  font-size: 24px;
   font-family: FuturaFuturisCBold;
   font-weight: normal;
   text-align: center;
@@ -255,41 +218,26 @@ a{
   padding-bottom: 12px;
   position: relative;
   margin-bottom: 20px;
-  letter-spacing: 0.7px;
-  @media($bp-larger-than-mobile) {
-    font-size: 24px;
-  }
   &:after{
     background: linear-gradient(90deg, #b3071b 0%, #008a9b 100%);
-    width: 56px;
-    height: 4px;
+    width: 76px;
+    height: 6px;
     content: "";
     display: inline-block;
     position: absolute;
     bottom: 0px;
     left: 50%;
-    margin-left: -28px;
-    @media($bp-larger-than-mobile) {
-      width: 76px;
-      height: 6px;
-      margin-left: -38px;
-    }
+    margin-left: -38px;
   }
 }
 .subcaption{
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 20px;
-  letter-spacing: 0.5px;
-  line-height: 135%;
-  @media($bp-larger-than-mobile) {
-    font-size: 16px;
-    margin-bottom: 43px;
-  }
 }
 
 .samples{
-  padding: 32px 0;
+  padding: 30px 0;
   &__list{
     display: flex;
     //width: 100%;
@@ -299,4 +247,3 @@ a{
     max-width: 360px;
   }
 }
-
