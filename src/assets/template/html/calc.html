@@ -5,6 +5,139 @@
     <div class="container">
         <div class="caption">Калькулятор услуг</div>
         <div class="subcaption">Выберите услугу и получите целевое предложение</div>
+        <div class="calculator__box">
+            <div class="calculator__column calculator__column--first">
+                <div class="select-box">
+                    <div class="select-box__label">Тип помещения*</div>
+                    <select name="" id="" class="styled">
+                        <option value="">Офис</option>
+                        <option value="">Квартира</option>
+                        <option value="">Третье значение</option>
+                        <option value="">Четвертое значение</option>
+                    </select>
+                </div>
+
+                <div class="calculator__check-box">
+                    <label class="check-custom">
+                        <input class="checkbox" name="plan" type="checkbox">
+                        <span class="checkbox-custom"></span>
+                        <span class="label">
+                            <span class="label__caption">Планировочное решение</span>
+                            <span class="label__hint">аксонометрия (3D-спецификация мебели),<br /> коллаж</span>
+                            <span class="label__price">5000 руб., 3-5 дней</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="calculator__check-box">
+                    <label class="check-custom">
+                        <input class="checkbox" name="plan" type="checkbox">
+                        <span class="checkbox-custom"></span>
+                        <span class="label">
+                            <span class="label__caption">Концепция</span>
+                            <span class="label__hint">разработка технического задания, обмеры, планировочное решение, 3D-визуализация</span>
+                            <span class="label__price">6800 руб., от 3 недель</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="calculator__check-box">
+                    <label class="check-custom">
+                        <input class="checkbox" name="plan" type="checkbox">
+                        <span class="checkbox-custom"></span>
+                        <span class="label">
+                            <span class="label__caption">Комплектация</span>
+                            <span class="label__hint">подбор материалов и наполнения в соответствии с рабочей документацией</span>
+                            <span class="label__price">5000 руб., от 2 недель</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="calculator__check-box">
+                    <label class="check-custom">
+                        <input class="checkbox" name="plan" type="checkbox">
+                        <span class="checkbox-custom"></span>
+                        <span class="label">
+                            <span class="label__caption">Авторский надзор с выездом на объект</span>
+                            <span class="label__hint"></span>
+                            <span class="label__price">20 000 руб.,<br /> 3-4 раза в месяц</span>
+                        </span>
+                    </label>
+                </div>
+
+            </div>
+            <div class="calculator__column calculator__column--second">
+
+                <div class="select-box">
+                    <div class="select-box__label">Метраж*</div>
+                    <select name="" class="styled">
+                        <option value="">от 20 - 55 м.кв.</option>
+                        <option value="">от 56 - 100 м.кв.</option>
+                        <option value="">от 101 - 200 м.кв.</option>
+                        <option value="">от 201 - 1000 м.кв.</option>
+                    </select>
+                </div>
+
+                <div class="calculator__comment-box">
+                    <div class="calculator__block-label">Ваш комментарий</div>
+                    <textarea class="calculator__comment" name=""></textarea>
+                </div>
+
+                <div class="calculator__submit-box">
+                    <a href="#" class="calculator__submit btn">Рассчитать</a>
+                </div>
+                <div class="calculator__reset-box">
+                    <a href="#" class="calculator__reset">Сбросить</a>
+                </div>
+
+            </div>
+            <div class="calculator__column calculator__column--third">
+                <div class="calculator__panel">
+
+                    <div class="c-result">
+                        <div class="c-result__item">
+                            <div class="c-result__label">Стоимость: </div>
+                            <div class="c-result__value">
+                                <span class="c-result__cost">12 000</span> руб.
+                            </div>
+                        </div>
+                        <div class="c-result__item">
+                            <div class="c-result__label">Срок выполнения: </div>
+                            <div class="c-result__value">
+                                <span class="c-result__period">1</span> месяц
+                                <span class="c-result__period">12</span> дней
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-form">
+                        <div class="result-form__caption">
+                            Заполните форму и получите
+                            предложение по решению Вашей задачи
+                        </div>
+                        <div class="result-form__item">
+                            <input type="text" class="result-form__input" placeholder="ФИО">
+                        </div>
+                        <div class="result-form__item">
+                            <input type="text" data-mask="+7 (999) 999-99-99" class="result-form__input" placeholder="Телефон">
+                        </div>
+                        <div class="result-form__item">
+                            <input type="text" class="result-form__input" placeholder="Email">
+                        </div>
+                        <div class="result-form__item result-form__item--agree">
+                            <label class="check-custom">
+                                <input class="checkbox" name="plan" type="checkbox">
+                                <span class="checkbox-custom"></span>
+                                <span class="label">Согласие на обработку личных данных</span>
+                            </label>
+                        </div>
+                        <div class="result-form__item">
+                            <button class="result-form__submit">Получить предложение</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

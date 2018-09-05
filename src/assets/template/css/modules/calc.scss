@@ -1,0 +1,253 @@
+.calculator{
+  padding: 20px 0;
+  background-color: #f7f7f7;
+  &__box{
+    margin-left: -15px;
+    margin-right: -15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__column{
+    padding-left: 15px;
+    padding-right: 15px;
+    flex: 1;
+  }
+  .select-box{
+    margin-bottom: 18px;
+    &__label{
+      font-size: 14px;
+      font-family:FuturaFuturisCBold;
+      font-weight: normal;
+      margin-bottom: 1px;
+    }
+  }
+  &__comment-box{
+    margin-bottom: 15px;
+  }
+  &__comment{
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    width: 100%;
+    resize: none;
+    height: 275px;
+    border-radius: 3px;
+  }
+  &__block-label{
+    font-size: 14px;
+    font-family:FuturaFuturisCBold;
+    font-weight: normal;
+  }
+  &__submit{
+    width: 100%;
+    text-align: center;
+  }
+  &__submit-box{
+    margin-bottom: 15px;
+  }
+  &__reset-box{
+    text-align: right;
+  }
+  &__reset{
+    font-size: 14px;
+    color: $red;
+  }
+  &__panel{
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    padding: 24px;
+  }
+  .subcaption{
+    margin-bottom: 38px;
+  }
+}
+
+$selectricHeight: 39px;
+/*border #e8e8e8*/
+.styled{
+  &.selectricWrapper{
+    width: 100%;
+  }
+  .selectric{
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    height: $selectricHeight;
+    line-height: $selectricHeight;
+    .label{
+      padding: 0px 5px 0px 18px;
+      font-size: 14px;
+      line-height: $selectricHeight;
+    }
+    .button{
+      color: transparent;
+      height: $selectricHeight;
+      line-height: $selectricHeight;
+      color: #333333;
+      &:after{
+        color: #333333;
+        font-family:FontAwesome;
+        content: "\f078";
+        font-size: 10px;
+      }
+    }
+  }
+  .selectricItems{
+    li{
+      padding-left: 18px;
+    }
+  }
+}
+$checkboxSizeAgree: 15px;
+.calculator{
+  &__check-box {
+    margin-bottom: 15px;
+  }
+  .check-custom {
+    position: relative;
+    .checkbox-custom {
+      width: $checkboxSizeAgree;
+      height: $checkboxSizeAgree;
+      border: 1px solid #aeaeae;
+      border-radius: 3px;
+      box-sizing: border-box;
+      line-height: $checkboxSizeAgree;
+      text-align: center;
+      background-color: #fff;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+      cursor: pointer;
+      position: absolute;
+      top: 3px;
+    }
+    .label {
+      display: inline-block;
+      line-height: 100%;
+      vertical-align: middle;
+      color: #333333;
+      font-weight: normal;
+      font-size: 14px;
+      padding-left: 25px;
+      cursor: pointer;
+      font-weight: normal;
+      &__caption{
+        display: block;
+        padding-top: 3px;
+        font-family: FuturaFuturisCBold;
+        margin-bottom: 1px;
+      }
+      &__hint{
+        font-weight: normal;
+        font-family: Tahoma;
+        display: block;
+        margin-bottom: 8px;
+      }
+      &__price{
+        font-family: GothamPro;
+        display: block;
+        margin-bottom: 8px;
+        line-height: 130%;
+      }
+    }
+    input.checkbox[type="checkbox"] {
+      display: none;
+    }
+    .checkbox:checked + .checkbox-custom::before {
+      content: "\f00c";
+      font-family: FontAwesome;
+      font-size: 10px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      line-height: $checkboxSizeAgree;
+      position: absolute;
+      color: $biruza;
+      line-height: 100%;
+    }
+  }
+}
+.c-result{
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  position: relative;
+  &:after{
+    display: inline-block;
+    content: "";
+    width: 143px;
+    height: 1px;
+    background-color: #e8e8e8;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__item{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 4px;
+  }
+  &__label{
+    color: #333333;
+    font-family: FuturaFuturisCBold;
+    font-size: 14px;
+    flex: 1;
+  }
+  &__value{
+    flex: 1;
+    font-size: 16px;
+  }
+  &__cost{
+    font-size: 24px;
+    color: $biruza;
+    font-family: Tahoma;
+    font-weight: bold;
+  }
+  &__period{
+    font-size: 24px;
+    color: $biruza;
+    font-family: Tahoma;
+    font-weight: bold;
+  }
+}
+.result-form{
+  &__caption{
+    color: #333333;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 18px;
+  }
+  &__submit{
+    background-color: #e8e8e8;
+    width: 100%;
+    padding: 14px 30px 12px;
+    text-align: center;
+    font-family: FuturaFuturisCBold;
+    color: #333333;
+    font-size: 14px;
+    border: 0 none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: $anim;
+    &:hover{
+      background-color: #333333;
+      color: #e8e8e8;
+    }
+  }
+  &__input{
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+  }
+  &__item{
+    margin-bottom: 15px;
+    &--agree{
+      text-align: center;
+      .check-custom{
+        display: inline-block;
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 $(function() {
-    $('select.selectric').selectric({
+    $('select.styled').selectric({
         maxHeight: 210
     });
 
@@ -12,8 +12,12 @@ $(function() {
         type  : 'image'
     });
 
-
-    $('input[name="phone"]').inputmask({"mask": "+7 (999) 999-99-99"});
+    $('[data-mask]').each(function() {
+        input = $(this);
+        mask = input.attr('data-mask');
+        input.inputmask({"mask": mask});
+    })
+    //$('[data-mask]').inputmask({"mask": $(this).attr('data-mask')});
 
 
 
