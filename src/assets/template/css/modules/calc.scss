@@ -339,7 +339,15 @@ $checkboxSizeAgree: 15px;
   &__column{
     padding-left: 15px;
     padding-right: 15px;
-    width: 50%;
+    width: 100%;
+    @media($bp-larger-than-mobile) {
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media($bp-larger-than-desktophd) {
+      width: 50%;
+    }
     &--about{
       p{
         margin: 6px 0 28px;
