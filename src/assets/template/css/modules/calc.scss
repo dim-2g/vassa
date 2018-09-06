@@ -503,24 +503,44 @@ p.regards{
   &__box{
     display: flex;
     background-color: #fff;
-    margin-top: 25px;
+    margin-top: 15px;
     margin-bottom: 25px;
     box-shadow: 4px 7px 18px 0px rgba(0, 138, 155, 0.07);
+    flex-direction: column;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    @media($bp-larger-than-tablet){
+      flex-direction: row;
+      max-width: none;
+      margin-top: 25px;
+    }
   }
   &__item{
     width: 100%;
-    padding: 66px 25px 25px 25px;
+    padding: 45px 25px 20px 25px;
     text-align: center;
     position: relative;
+    @media($bp-larger-than-mobile){
+      padding: 66px 25px 25px 25px;
+    }
     &:after{
       display: inline-block;
-      width: 1px;
       background-color: #e8e8e8;
       position: absolute;
-      right: 0;
-      top: 30px;
-      bottom: 30px;
+      left: 30px;
+      right: 30px;
+      bottom: 0;
+      height: 1px;
       content: "";
+      @media($bp-larger-than-tablet){
+        left: auto;
+        right: 0;
+        top: 30px;
+        bottom: 30px;
+        width: 1px;
+        height: auto;
+      }
     }
     &:last-child{
       &:after {
@@ -530,7 +550,7 @@ p.regards{
     &:before{
       font-family: FontAwesome;
       position: absolute;
-      top: 22px;
+      top: 10px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 24px;
@@ -559,13 +579,19 @@ p.regards{
     }
   }
   &__value{
-    font-size: 14px;
+    font-size: 12px;
     color: #777777;
+    @media($bp-larger-than-mobile){
+      font-size: 14px;
+    }
   }
   &__name{
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     margin-bottom: 7px;
+    @media($bp-larger-than-mobile){
+      font-size: 16px;
+    }
   }
   &__map-box{
     height: 100px;
@@ -594,7 +620,7 @@ p.regards{
   .slick-dots li {
     width: 10px;
     height: 10px;
-    margin: 0 2px;
+    margin: 0 4px;
     @media($bp-larger-than-desktop){
       width: 13px;
       height: 13px;
@@ -625,34 +651,64 @@ p.regards{
   .slick-dots li.slick-active button::before {
     background-color: $biruza;
   }
+  .slick-slide{
+    > div{
+      text-align: center;
+      img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        @media($bp-larger-than-desktop){
+          width: inherit;
+        }
+      }
+    }
+  }
 }
 .questions{
   background: $biruza url('/assets/template/images/questions__bg.jpg') left top;
-  padding: 68px 0 86px;
+  padding: 20px 0 20px;
+  @media($bp-larger-than-mobile){
+    padding: 68px 0 86px;
+  }
   &__caption{
     color: #fff;
-    font-size: 44px;
+    font-size: 16px;
     font-family: FuturaFuturisCBold;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 8px;
+    @media($bp-larger-than-mobile){
+      font-size: 44px;
+      margin-bottom: 0;
+    }
   }
   &__subcaption{
     color: #fff;
     text-align: center;
-    font-size: 20px;
+    font-size: 14px;
     font-family: FuturaFuturisCBold;
     letter-spacing: 0.5px;
+    @media($bp-larger-than-mobile){
+      font-size: 20px;
+    }
   }
   &__box{
     display: flex;
     justify-content: center;
-    margin-top: 45px;
+    margin-top: 21px;
+    @media($bp-larger-than-mobile) {
+      margin-top: 45px;
+    }
   }
   &__item{
     display: inline-block;
-    margin: 0 30px;
+    margin: 0 20px;
     position: relative;
+    @media($bp-larger-than-mobile){
+      margin: 0 30px;
+    }
     &:before{
       transition: $cubic02;
       display: inline-block;
@@ -679,6 +735,10 @@ p.regards{
     img{
       position: relative;
       z-index: 2;
+      width: 32px;
+      @media($bp-larger-than-mobile){
+        width: inherit;
+      }
     }
   }
 }
@@ -688,6 +748,12 @@ p.regards{
   font-size: 12px;
   &__links{
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    @media($bp-larger-than-tablet){
+      flex-direction: row;
+      text-align: left;
+    }
     a{
       color: #333;
       &:hover{
@@ -699,17 +765,51 @@ p.regards{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: column-reverse;
+    @media($bp-larger-than-desktop){
+      flex-direction: row;
+    }
   }
   &__grid{
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media($bp-larger-than-desktop){
+      flex-direction: row;
+    }
   }
   &__dev{
-    margin: 0 15px;
+    margin: 4px 0 0 0;
+    @media($bp-larger-than-tablet){
+      margin: 0 15px;
+    }
+    a{
+      text-decoration: none;
+      @media($bp-larger-than-mobile){
+        text-decoration: underline;
+      }
+    }
   }
   &__privacy{
-    margin: 0 40px;
+    margin: 0 10px 14px;
+    @media($bp-larger-than-desktop){
+      margin: 0 40px;
+    }
     a{
       text-transform: uppercase;
+    }
+  }
+  &__callback{
+    margin-bottom: 15px;
+    display: none;
+    @media($bp-larger-than-mobile){
+      display: block;
+    }
+    @media($bp-larger-than-desktop){
+      margin: 0;
+    }
+    .btn-b{
+      display: inline-block;
     }
   }
 }
@@ -1016,3 +1116,76 @@ p.regards{
 .red-start{
   color: $red;
 }
+
+#map{
+  height: 290px;
+  width: 100%;
+  @media($bp-larger-than-mobile) {
+    height: 386px;
+  }
+  [class*="-ground-pane"] {
+    filter:saturate(5%);
+    -ms-filter: saturate(5%);
+    -webkit-filter: saturate(5%);
+    -moz-filter: saturate(5%);
+    -o-filter: saturate(5%);
+  }
+  .popover {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    z-index: 1010;
+    width: 260px;
+    height: 151px;
+    //transform: translate(-100%, -50%);
+    @media($bp-larger-than-tablet) {
+      width: 4000px;
+    }
+    @media($bp-larger-than-mobile) {
+      width: 615px;
+    }
+    &__grid{
+      display: flex;
+      flex-direction: row;
+      img {
+        flex-shrink: 0;
+        display: none;
+        @media($bp-larger-than-mobile) {
+          display: inline-block;
+        }
+      }
+    }
+    &__address{
+      font-weight: bold;
+      margin-bottom: 2px;
+      display: block;
+    }
+
+  }
+  .popover .close {
+    position: absolute;
+    right: 5px;
+    top: 1px;
+    text-decoration: none;
+    color: #333;
+  }
+  .popover-inner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    @media($bp-larger-than-mobile) {
+      font-size: 14px;
+    }
+    > ymaps{
+      display: inline-block !important;
+      width: 100% !important;
+      padding: 20px;
+      @media($bp-larger-than-mobile) {
+        padding: 28px 50px 28px 28px;
+      }
+    }
+  }
+}
+

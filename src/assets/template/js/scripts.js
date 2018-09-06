@@ -48,7 +48,33 @@ initPhotoSlider  = function() {
             'dots': true,
             'slidesToShow': 6,
             'slidesToScroll': 1,
-            'adaptiveHeight': true
+            'adaptiveHeight': true,
+            'responsive': [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 5,
+                    }
+                },
+                {
+                    breakpoint: 1000,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 750,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 550,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+            ]
         });
         slider_photo = true;
     }
