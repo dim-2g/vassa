@@ -1,14 +1,19 @@
 
 
 .calculator{
-  padding: 20px 0;
+  padding: 18px 0;
   background-color: #f7f7f7;
+  @media($bp-larger-than-mobile) {
+    padding: 46px 0;
+  }
   &__box{
-    margin-left: -15px;
-    margin-right: -15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    @media($bp-larger-than-mobile) {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
     @media($bp-larger-than-desktophd) {
       align-items: flex-start;
       flex-direction: row;
@@ -20,7 +25,52 @@
     padding-right: 15px;
     width: 100%;
     max-width: 390px;
+    &--first{
+      position: relative;
+      padding-bottom: 5px;
+      margin-bottom: 18px;
+      @media($bp-larger-than-tablet) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      &:after{
+        display: inline-block;
+        content: "";
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        @media($bp-larger-than-tablet) {
+          display: none;
+        }
+      }
+    }
+    &--second{
+      position: relative;
+      padding-bottom: 21px;
+      margin-bottom: 11px;
+      @media($bp-larger-than-tablet) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+      &:after{
+        display: inline-block;
+        content: "";
+        height: 1px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        @media($bp-larger-than-tablet) {
+          display: none;
+        }
+      }
+    }
   }
+
   .calculator__column--second{
     .select-box{
       margin-bottom: 20px;
@@ -60,28 +110,45 @@
     text-align: center;
     font-size: 14px;
     font-family:FuturaFuturisCBold;
-    padding: 18px 30px 11px;
+    padding: 11px 30px 11px;
     letter-spacing: 0.5px;
-    height: 47px;
+    height: 36px;
+    @media($bp-larger-than-mobile) {
+      height: 47px;
+      padding: 16px 30px 11px;
+    }
   }
   &__submit-box{
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 15px;
+    }
   }
   &__reset-box{
     text-align: right;
   }
   &__reset{
-    font-size: 14px;
     color: $red;
+    font-size: 12px;
+    @media($bp-larger-than-mobile) {
+      font-size: 14px;
+    }
   }
   &__panel{
     background-color: #fff;
     border: 1px solid #e8e8e8;
-    padding: 24px;
+    padding: 18px;
     margin-top: 18px;
+    @media($bp-larger-than-tablet) {
+      padding: 24px;
+    }
+
   }
   .subcaption{
-    margin-bottom: 38px;
+    margin-bottom: 10px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 38px;
+    }
   }
 }
 
@@ -105,7 +172,7 @@ $selectricHeight: 39px;
     .button{
       color: transparent;
       height: $selectricHeight;
-      line-height: $selectricHeight;
+      line-height: 37px;
       color: #333333;
       &:after{
         color: #333333;
@@ -123,74 +190,89 @@ $selectricHeight: 39px;
 }
 $checkboxSizeAgree: 15px;
 .calculator{
+
   &__check-box {
     margin-bottom: 12px;
   }
-  .check-custom {
-    position: relative;
-    .checkbox-custom {
-      width: $checkboxSizeAgree;
-      height: $checkboxSizeAgree;
-      border: 1px solid #aeaeae;
-      border-radius: 3px;
-      box-sizing: border-box;
-      line-height: $checkboxSizeAgree;
-      text-align: center;
-      background-color: #fff;
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
-      cursor: pointer;
-      position: absolute;
-      top: 0px;
-    }
-    .label {
-      display: inline-block;
-      line-height: 100%;
-      vertical-align: middle;
-      color: #333333;
-      font-weight: normal;
-      font-size: 14px;
-      padding-left: 25px;
-      cursor: pointer;
-      font-weight: normal;
-      &__caption{
-        display: block;
-        padding-top: 3px;
-        font-family: FuturaFuturisCBold;
+
+}
+
+.check-custom {
+  position: relative;
+  .checkbox-custom {
+    width: $checkboxSizeAgree;
+    height: $checkboxSizeAgree;
+    border: 1px solid #aeaeae;
+    border-radius: 3px;
+    box-sizing: border-box;
+    line-height: $checkboxSizeAgree;
+    text-align: center;
+    background-color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 0px;
+  }
+  .label {
+    display: inline-block;
+    line-height: 100%;
+    vertical-align: middle;
+    color: #333333;
+    font-weight: normal;
+    font-size: 14px;
+    padding-left: 25px;
+    cursor: pointer;
+    font-weight: normal;
+    &__caption{
+      display: block;
+      padding-top: 3px;
+      font-family: FuturaFuturisCBold;
+      margin-bottom: 4px;
+      @media($bp-larger-than-mobile) {
         margin-bottom: 1px;
       }
-      &__hint{
-        font-weight: normal;
-        font-family: Tahoma;
-        display: block;
-        margin-bottom: 7px;
-        line-height: 110%;
+    }
+    &__hint{
+      font-weight: normal;
+      font-family: Tahoma;
+      display: block;
+      margin-bottom: 7px;
+      line-height: 110%;
+      font-size: 12px;
+      @media($bp-larger-than-mobile) {
+        font-size: 14px;
       }
-      &__price{
+    }
+    &__price{
+      font-family: Tahoma;
+      display: block;
+      line-height: 130%;
+      @media($bp-larger-than-mobile) {
+        font-size: 14px;
         font-family: GothamPro;
-        display: block;
-        line-height: 130%;
       }
-    }
-    input.checkbox[type="checkbox"] {
-      display: none;
-    }
-    .checkbox:checked + .checkbox-custom::before {
-      content: "\f00c";
-      font-family: FontAwesome;
-      font-size: 10px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      display: inline-block;
-      line-height: $checkboxSizeAgree;
-      position: absolute;
-      color: $biruza;
-      line-height: 100%;
     }
   }
+  input.checkbox[type="checkbox"] {
+    display: none;
+  }
+  .checkbox:checked + .checkbox-custom::before {
+    content: "\f00c";
+    font-family: FontAwesome;
+    font-size: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    line-height: $checkboxSizeAgree;
+    position: absolute;
+    color: $biruza;
+    line-height: 100%;
+  }
 }
+
 .c-result{
   margin-bottom: 18px;
   padding-bottom: 22px;
@@ -271,16 +353,21 @@ $checkboxSizeAgree: 15px;
   &__submit{
     background-color: #e8e8e8;
     width: 100%;
-    padding: 16px 30px 12px;
+    padding: 12px 30px 12px;
     text-align: center;
-    font-family: FuturaFuturisCBold;
     color: #333333;
-    font-size: 14px;
+    font-size: 12px;
     border: 0 none;
     border-radius: 3px;
     cursor: pointer;
     transition: $anim;
-    height: 47px;
+    height: 38px;
+    @media($bp-larger-than-mobile) {
+      font-family: FuturaFuturisCBold;
+      font-size: 14px;
+      height: 47px;
+      padding: 16px 30px 12px;
+    }
     &:hover{
       background-color: #333333;
       color: #e8e8e8;
@@ -296,6 +383,9 @@ $checkboxSizeAgree: 15px;
     margin-bottom: 14px;
     &:nth-child(4){
       margin-bottom: 9px;
+    }
+    &:last-child{
+      margin-bottom: 0;
     }
     &--agree{
       @media($bp-larger-than-mobile) {
@@ -323,7 +413,16 @@ $checkboxSizeAgree: 15px;
 }
 
 .how-works{
-  padding: 40px 0;
+  padding: 16px 0 12px;
+  @media($bp-larger-than-mobile) {
+    padding: 40px 0;
+  }
+  .subcaption{
+    margin-bottom: 16px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: inherit;
+    }
+  }
   &__box{
     margin-left: -15px;
     margin-right: -15px;
@@ -350,38 +449,65 @@ $checkboxSizeAgree: 15px;
     }
     &--about{
       p{
-        margin: 6px 0 28px;
+        margin: 6px 0 18px;
+        font-size: 12px;
+        @media($bp-larger-than-mobile) {
+          margin: 6px 0 28px;
+          line-height: inherit;
+          font-size: inherit;
+        }
       }
     }
     &--slider{
-      padding-top: 8px;
+      padding-top: 0px;
+      @media($bp-larger-than-mobile) {
+        padding-top: 8px;
+      }
     }
   }
   &__header{
-    font-size: 36px;
+    font-size: 18px;
     font-family: FuturaFuturisCBold;
     color: $biruza;
-    margin-bottom: 16px;
+    margin-bottom: 11px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 16px;
+      font-size: 36px;
+    }
   }
 }
 
 .peoples{
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
+  @media($bp-larger-than-mobile) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
   &__item{
     display: inline-block;
     margin-bottom: 10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media($bp-larger-than-mobile) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
   &__name{
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     margin-bottom: 6px;
+    @media($bp-larger-than-mobile) {
+      font-size: 16px;
+    }
   }
   &__staff{
-    font-size: 14px;
+    font-size: 10px;
     color: #7d7d7d;
+    @media($bp-larger-than-mobile) {
+      font-size: 14px;
+    }
   }
   &__image-box{
     margin-bottom: 6px;
@@ -392,22 +518,35 @@ $checkboxSizeAgree: 15px;
   }
 }
 
-$sliderButtonSize: 30px;
+$sliderButtonSize: 17px;
+@media($bp-larger-than-mobile) {
+  $sliderButtonSize: 30px;
+}
 .people-slider{
   display: none;
   &.slick-initialized{
     display: block;
   }
+  &.slick-dotted.slick-slider{
+    margin-bottom: 15px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: inherit;
+    }
+  }
   .slick-next{
-    top: 138px;
+    top: 65px;
     width: $sliderButtonSize;
     height: $sliderButtonSize;
     border: 1px solid #e8e8e8;
     border-radius: 3px;
-    right: 0;
+    right: 3px;
     z-index: 100;
     background-color: #fff;
     transition: $anim;
+    @media($bp-larger-than-mobile) {
+      top: 138px;
+      right: 0;
+    }
     &:hover{
       background-color: $biruza;
       color: #fff;
@@ -422,19 +561,26 @@ $sliderButtonSize: 30px;
     font-family: FontAwesome;
     content: "\f105";
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     transition: $anim;
+    @media($bp-larger-than-mobile) {
+      font-size: 18px;
+    }
   }
   .slick-prev{
-    top: 138px;
+    top: 65px;
     border: 1px solid #e8e8e8;
     width: $sliderButtonSize;
     height: $sliderButtonSize;
     border-radius: 3px;
     z-index: 100;
-    left: 0;
+    left: 3px;
     background-color: #fff;
     transition: $anim;
+    @media($bp-larger-than-mobile) {
+      top: 138px;
+      left: 0;
+    }
     &:hover{
       background-color: $biruza;
       border-color: $biruza;
@@ -448,24 +594,30 @@ $sliderButtonSize: 30px;
     font-family: FontAwesome;
     content: '\f104';
     display: inline-block;
-    font-size: 18px;
+    font-size: 14px;
     transition: $anim;
+    @media($bp-larger-than-mobile) {
+      font-size: 18px;
+    }
   }
   .slick-dots{
-    bottom: -29px;
+    bottom: -11px;
+    @media($bp-larger-than-mobile) {
+      bottom: -29px;
+    }
   }
   .slick-dots li {
-    width: 10px;
-    height: 10px;
-    margin: 0 2px;
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
     @media($bp-larger-than-desktop){
       width: 13px;
       height: 13px;
       margin: 0 5px;
     }
     button{
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       @media($bp-larger-than-desktop){
         width: 13px;
         height: 13px;
@@ -474,8 +626,8 @@ $sliderButtonSize: 30px;
   }
   .slick-dots li button::before {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border: 1px $biruza solid;
     border-radius: 3px;
     background-color: #fff;
@@ -499,15 +651,23 @@ $sliderButtonSize: 30px;
   }
 }
 p.regards{
-  margin-top: 30px;
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-top: -4px;
+  margin-bottom: 6px;
+  font-size: 12px;
   font-family: FuturaFuturisCBold;
+  @media($bp-larger-than-mobile) {
+    margin-top: 30px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
 }
 
 .contacts{
   background-color: #f7f7f7;
-  padding: 40px 0 44px;
+  padding: 17px 0 17px;
+  @media($bp-larger-than-mobile) {
+    padding: 40px 0 44px;
+  }
   &__box{
     display: flex;
     background-color: #fff;
@@ -564,6 +724,9 @@ p.regards{
       font-size: 24px;
       color: $biruza;
       display: inline-block;
+      @media($bp-larger-than-mobile) {
+        top: 20px;
+      }
     }
     &--address{
       &:before{
@@ -602,32 +765,45 @@ p.regards{
     }
   }
   &__map-box{
-    height: 100px;
     border: 1px solid #e8e8e8;
     margin-bottom: 30px;
     background-color: #fff;
   }
 }
 .photo-box{
-  margin-left: -15px;
-  margin-right: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
   font-size: 0;
+  @media($bp-larger-than-mobile) {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
   &.slick-dotted{
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 50px;
+    }
   }
   &__item{
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
     display: inline-block;
+    @media($bp-larger-than-mobile) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
 }
 .photo-slider{
   .slick-dots{
-    bottom: -47px;
+    bottom: -21px;
+    @media($bp-larger-than-mobile) {
+      bottom: -47px;
+    }
   }
   .slick-dots li {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     margin: 0 4px;
     @media($bp-larger-than-desktop){
       width: 13px;
@@ -635,8 +811,8 @@ p.regards{
       margin: 0 5px;
     }
     button{
-      width: 10px;
-      height: 10px;
+      width: 8px;
+      height: 8px;
       @media($bp-larger-than-desktop){
         width: 13px;
         height: 13px;
@@ -645,8 +821,64 @@ p.regards{
   }
   .slick-dots li button::before {
     content: "";
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
+    border: 1px $biruza solid;
+    border-radius: 3px;
+    background-color: transparent;
+    opacity: 1;
+    @media($bp-larger-than-desktop){
+      width: 13px;
+      height: 13px;
+    }
+  }
+  .slick-dots li.slick-active button::before {
+    background-color: $biruza;
+  }
+  .slick-slide{
+    > div{
+      text-align: center;
+      img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        @media($bp-larger-than-desktop){
+          width: inherit;
+        }
+      }
+    }
+  }
+}
+
+.howwork-slider{
+  .slick-dots{
+    bottom: -21px;
+    @media($bp-larger-than-mobile) {
+      bottom: -10px;
+    }
+  }
+  .slick-dots li {
+    width: 8px;
+    height: 8px;
+    margin: 0 4px;
+    @media($bp-larger-than-desktop){
+      width: 13px;
+      height: 13px;
+      margin: 0 5px;
+    }
+    button{
+      width: 8px;
+      height: 8px;
+      @media($bp-larger-than-desktop){
+        width: 13px;
+        height: 13px;
+      }
+    }
+  }
+  .slick-dots li button::before {
+    content: "";
+    width: 8px;
+    height: 8px;
     border: 1px $biruza solid;
     border-radius: 3px;
     background-color: transparent;
@@ -752,8 +984,11 @@ p.regards{
 }
 
 .footer{
-  padding: 40px 0;
+  padding: 16px 0;
   font-size: 12px;
+  @media($bp-larger-than-mobile) {
+    padding: 40px 0;
+  }
   &__links{
     display: flex;
     flex-direction: column;
@@ -823,18 +1058,35 @@ p.regards{
 }
 
 .samples{
-  padding: 40px 0;
   background-color: #f7f7f7;
+  padding: 16px 0;
+  @media($bp-larger-than-mobile){
+    padding: 40px 0;
+  }
+  &__list{
+    display: flex;
+    //width: 100%;
+    justify-content: space-around;
+  }
+  &__item{
+    max-width: 360px;
+  }
   &__box{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    @media($bp-larger-than-tablet){
+      justify-content: space-between;
+    }
   }
   &__card{
     max-width: 360px;
     background-color: #fff;
     box-shadow: 4px 7px 18px 0px rgba(0, 138, 155, 0.07);
-    margin-bottom: 30px;
+    margin-bottom: 12px;
+    @media($bp-larger-than-mobile){
+      margin-bottom: 30px;
+    }
     &:hover{
       .samples__image{
         transform: scale(1.2);
@@ -842,9 +1094,13 @@ p.regards{
     }
   }
   &__image-box{
-    height: 207px;
+    height: 165px;
     position: relative;
     overflow: hidden;
+    @media($bp-larger-than-mobile){
+      height: 207px;
+    }
+
   }
   &__image{
     background-repeat: no-repeat;
@@ -857,28 +1113,40 @@ p.regards{
     transition: $cubic;
   }
   &__info{
-    padding: 20px 15px;
+    padding: 14px 15px;
+    @media($bp-larger-than-mobile){
+      padding: 20px 15px;
+    }
   }
   &__name{
     font-size: 14px;
     font-weight: bold;
     color: $biruza;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 15px;
+    }
   }
   &__description{
     font-size: 14px;
     color: #333333;
     line-height: 130%;
-    margin-bottom: 17px;
+    margin-bottom: 10px;
+    @media($bp-larger-than-mobile) {
+      margin-bottom: 17px;
+    }
   }
   &__more-link{
     color: #9a9a9a;
-    font-size: 14px;
+    font-size: 13px;
     text-decoration: none;
     transition: $anim;
     position: relative;
     padding-right: 23px;
+    @media($bp-larger-than-mobile) {
+      font-size: 14px;
+    }
     &:hover{
       color: #333;
     }
@@ -906,27 +1174,67 @@ p.regards{
       text-align: center;
       line-height: 14px;
       transform: translateX(0px);
+      font-size: 12px;
+      @media($bp-larger-than-mobile) {
+        font-size: inherit;
+      }
     }
   }
   &__more-box{
     text-align: center;
     .btn--arrow{
-      font-size: 14px;
-      max-width: 268px;
+      font-size: 12px;
       width: 100%;
+      height: 36px;
+      line-height: 35px;
+      padding-left: 10px;
+      padding-right: 10px;
+      max-width: 178px;
+      @media($bp-larger-than-mobile) {
+        height: 47px;
+        line-height: 47px;
+        max-width: 268px;
+        font-size: 14px;
+      }
+      span{
+        padding-right: 0;
+        @media($bp-larger-than-mobile) {
+          padding-right: 42px;
+        }
+        &:before{
+          display: none;
+          @media($bp-larger-than-mobile) {
+            display: inherit;
+          }
+        }
+        &:after{
+          display: none;
+          @media($bp-larger-than-mobile) {
+            display: inherit;
+          }
+        }
+
+      }
     }
   }
 }
 
 .services{
-  padding: 46px 0 26px;
+  padding: 16px 0 16px;
   background-color: #fff;
+  @media($bp-larger-than-mobile) {
+    padding: 46px 0 26px;
+  }
   &__grid{
     margin-left: -15px;
     margin-right: -15px;
     display: flex;
     justify-content: center;
     margin-top: 34px;
+    flex-direction: column;
+    @media($bp-larger-than-mobile) {
+      flex-direction: row;
+    }
   }
   &__item{
     padding-left: 15px;
@@ -975,12 +1283,31 @@ p.regards{
     }
   }
   &__card{
-    box-shadow: 4px 7px 18px 0px rgba(0, 138, 155, 0.15);
+    box-shadow: 2px 0px 8px 2px rgba(0, 138, 155, 0.07);
     max-width: 356px;
     background-color: #fff;
     border-radius: 3px;
     overflow: hidden;
     margin-bottom: 10px;
+    @media($bp-larger-than-mobile) {
+      box-shadow: 4px 7px 18px 0px rgba(0, 138, 155, 0.15);
+    }
+    &--active{
+      .services__bottom{
+        display: block;
+      }
+      .services__top{
+        &:after{
+          display: inline-block;
+        }
+      }
+      .services__arrow{
+        transform: rotate(-90deg);
+        &:after{
+          bottom: 0;
+        }
+      }
+    }
   }
   &__top{
     padding: 15px 25px;
@@ -988,23 +1315,74 @@ p.regards{
     position: relative;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    @media($bp-larger-than-tablet) {
+      cursor: inherit;
+    }
     &:after{
       content: "";
-      display: inline-block;
+      display: none;
       height: 1px;
       background-color: #e8e8e8;
       position: absolute;
       bottom: 0;
       left: 25px;
       right: 25px;
+      @media($bp-larger-than-tablet) {
+        display: inline-block;
+      }
+    }
+  }
+  &__bottom{
+    display: none;
+    @media($bp-larger-than-tablet) {
+      display: inherit;
+    }
+  }
+  &__arrow{
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background-color: $red;
+    display: inline-block;
+    border-radius: 2px;
+    right: 15px;
+    top: 50%;
+    margin-top: -7px;
+    transform: rotate(90deg);
+    transition: $cubic;
+    @media($bp-larger-than-tablet) {
+      display: none;
+    }
+    &:after{
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      color: #fff;
+      font-family: FontAwesome;
+      content: "\f105";
+      display: inline-block;
+      right: 0;
+      bottom: 1px;
+      text-align: center;
+      line-height: 14px;
+      transform: translateX(0px);
+      font-size: 12px;
+      @media($bp-larger-than-mobile) {
+        font-size: inherit;
+      }
     }
   }
   &__name{
-    font-size: 16px;
+    font-size: 14px;
     color: #333333;
     font-family: FuturaFuturisCBold;
-    padding-left: 65px;
+    padding-left: 54px;
     position: relative;
+    @media($bp-larger-than-mobile) {
+      font-size: 16px;
+      padding-left: 65px;
+    }
   }
   &__middle{
     padding: 25px 25px 5px 25px;
@@ -1050,7 +1428,7 @@ p.regards{
         content: "\f00c";
         font-family: FontAwesome;
         position: absolute;
-        top: 1px;
+        top: 2px;
         left: 0;
         text-align: center;
       }
@@ -1060,7 +1438,11 @@ p.regards{
     max-width: 275px;
     display: flex;
     flex-direction: column;
-    min-height: 256px;
+    padding-bottom: 15px;
+    @media($bp-larger-than-tablet) {
+      min-height: 256px;
+      padding-bottom: inherit;
+    }
   }
   &__cost-line{
     padding: 10px 25px;
@@ -1105,10 +1487,13 @@ p.regards{
     }
   }
   &__hint{
-    margin-top: auto;
+    margin-top: 30px;
     font-size: 13px;
     margin-bottom: 24px;
     line-height: 140%;
+    @media($bp-larger-than-tablet) {
+      margin-top: auto;
+    }
   }
 
 }

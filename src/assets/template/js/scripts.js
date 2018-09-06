@@ -17,10 +17,33 @@ $(function() {
         mask = input.attr('data-mask');
         input.inputmask({"mask": mask});
     })
+
+    $('.toggle-menu').on('click', function () {
+        $('.mobile-menu').slideToggle();
+    });
     //$('[data-mask]').inputmask({"mask": $(this).attr('data-mask')});
+
+    $('.services__top').on('click', function () {
+        var parentThis = $(this).parents('.services__card');
+        parentThis.toggleClass('services__card--active');
+        /*
+        $('.services__card').not(parentThis).removeClass('services__card--active');
+        if (parentThis.hasClass('services__card--active')) {
+            parentThis.removeClass('services__card--active');
+        } else {
+            parentThis.addClass('services__card--active');
+        }*/
+    });
+
+    $('body').on('click', '[data-goto]', function(e) {
+        e.preventDefault();
+        var selector = $(this).attr('data-goto');
+        $('html, body').animate({ scrollTop: $(selector).offset().top}, 1200);
+    });
 
     initPeopleSlider();
     initPhotoSlider();
+    initHowWorkSlider();
 
 });
 
@@ -80,10 +103,49 @@ initPhotoSlider  = function() {
     }
 };
 
+var slider_howwork = false;
+initHowWorkSlider  = function() {
+
+    if ($(window).width()<1000) {
+        if (!slider_howwork) {
+            $('.howwork-slider').slick({
+                'autoplay': false,
+                'arrows': true,
+                'dots': true,
+                'slidesToShow': 3,
+                'slidesToScroll': 1,
+                'infinite': false,
+                'responsive': [
+                    {
+                        breakpoint: 750,
+                        settings: {
+                            slidesToShow: 2,
+                        }
+                    },
+                    {
+                        breakpoint: 550,
+                        settings: {
+                            slidesToShow: 1,
+                        }
+                    }
+                ]
+            });
+            slider_howwork = true;
+        }
+    } else {
+        if (slider_howwork) {
+            $('.howwork-slider').slick('unslick');
+            slider_howwork = false;
+        }
+    }
+}
+
+
 $(window).resize(function(){
     var width = $(window).width();
-    //collapseReview(1);
-   // stepsSlider();
+    initPeopleSlider();
+    initPhotoSlider();
+    initHowWorkSlider();
 
 });
 

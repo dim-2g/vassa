@@ -1,5 +1,23 @@
 //= include/header.html
 
+<div class="topline-mobile">
+    <div class="container">
+        <div class="topline-mobile__box">
+            <div class="topline-mobile__burger toggle-menu"></div>
+            <a href="/"><img src="/assets/template/images/logo-mobile.png" alt=""></a>
+            <a href="#callback" class="topline-mobile__callback open-popup-link"></a>
+        </div>
+    </div>
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#" data-goto=".how-works">Команда</a></li>
+            <li><a href="#" data-goto=".samples">Работы</a></li>
+            <li><a href="#" data-goto=".services">Услуги</a></li>
+            <li><a href="#" data-goto=".contacts">Контакты</a></li>
+        </ul>
+    </div>
+</div>
+
 
 <div class="header">
     <div class="container">
@@ -7,30 +25,32 @@
             <!--div class="header__burger"><span></span></div-->
             <div class="topline__left">
                 <a href="/" class="logo-top"><img src="/assets/template/images/logo.png" alt=""></a>
-                <a href="#" class="btn-b btn-b__calc">Калькулятор</a>
+                <a href="#" class="btn-b btn-b__calc" data-goto=".calculator">Калькулятор</a>
             </div>
             <div class="topline__right">
                 <ul class="topline__list">
-                    <li><a href="#">Команда</a></li>
-                    <li><a href="#">Работы</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" data-goto=".how-works">Команда</a></li>
+                    <li><a href="#" data-goto=".samples">Работы</a></li>
+                    <li><a href="#" data-goto=".services">Услуги</a></li>
+                    <li><a href="#" data-goto=".contacts">Контакты</a></li>
                 </ul>
                 <div class="topline__contacts">
                     <div><a href="tel:88125078023" class="topline__phone">(812) 507 80 23</a></div>
-                    <div><a href="#" class="topline__callback">Заказать звонок</a></div>
+                    <div><a href="#callback" class="topline__callback open-popup-link">Заказать звонок</a></div>
                 </div>
             </div>
         </div>
         <div class="header__body">
-            <div class="header__caption">
-                Умное проектирование
-                офисов и общественных
-                пространств
-            </div>
-            <div class="header__subcaption">
-                С учетом особенностей пространства, бюджета и <br />
-                ваших пожеланий
+            <div class="header__pane">
+                <div class="header__caption">
+                    Умное проектирование<br class="in-mobile" />
+                    офисов и общественных<br class="in-mobile" />
+                    пространств
+                </div>
+                <div class="header__subcaption">
+                    С учетом особенностей пространства, бюджета и <br />
+                    ваших пожеланий
+                </div>
             </div>
             <div class="header__items">
                 <div class="header__item">
@@ -42,7 +62,9 @@
                     готовим за 3 дня
                 </div>
             </div>
-            <a class="btn btn--arrow btn__all-works" href="#">Смотреть примеры работ</a>
+            <div class="header__items-all">
+                <a class="btn btn--arrow btn__all-works" href="#" data-goto=".samples">Смотреть примеры работ</a>
+            </div>
         </div>
     </div>
 
@@ -189,36 +211,39 @@
         <div class="services__grid">
 
             <div class="services__item services__item--concepcia">
-                <div class="services__card">
+                <div class="services__card services__card--active">
                     <div class="services__top">
                         <div class="services__name">Разработка концепции пространства</div>
+                        <span class="services__arrow"></span>
                     </div>
-                    <div class="services__middle">
-                        <div class="services__description">
-                            <p>Предлагаем 2 концепции, после
-                                согласования и утверждения вносим
-                                правки до 3-х раз</p>
-                            <ul>
-                                <li>Планирвоание решения</li>
-                                <li>Аксонометрия (3D-спецификация
-                                    мебели)</li>
-                                <li>Комплектация и спецификация
-                                    мебели</li>
-                                <li>Шеф-монтаж</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="services__cost">
-                        <div class="services__cost-line">
-                            <div class="services__cost--day">
-                                от <span class="cost-value">5</span> раб. дней
-                            </div>
-                            <div class="services__cost--price">
-                                от <span class="cost-value">5 000</span> <span class="ruble"></span>
+                    <div class="services__bottom">
+                        <div class="services__middle">
+                            <div class="services__description">
+                                <p>Предлагаем 2 концепции, после
+                                    согласования и утверждения вносим
+                                    правки до 3-х раз</p>
+                                <ul>
+                                    <li>Планирвоание решения</li>
+                                    <li>Аксонометрия (3D-спецификация
+                                        мебели)</li>
+                                    <li>Комплектация и спецификация
+                                        мебели</li>
+                                    <li>Шеф-монтаж</li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="services__cost">
+                            <div class="services__cost-line">
+                                <div class="services__cost--day">
+                                    от <span class="cost-value">5</span> раб. дней
+                                </div>
+                                <div class="services__cost--price">
+                                    от <span class="cost-value">5 000</span> <span class="ruble"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="services__button" href="#">Заказать концепцию</a>
                     </div>
-                    <a class="services__button" href="#">Заказать концепцию</a>
                 </div>
             </div>
 
@@ -226,30 +251,33 @@
                 <div class="services__card">
                     <div class="services__top">
                         <div class="services__name">Полный<br /> дизайн-проект</div>
+                        <span class="services__arrow"></span>
                     </div>
-                    <div class="services__middle">
-                        <div class="services__description">
-                            <p>Работает команда архитекторов
-                                общественных помещений</p>
-                            <ul>
-                                <li>Концепция</li>
-                                <li>Рабочая документация</li>
-                                <li>Комплектация</li>
-                                <li>Авторский надзор</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="services__cost">
-                        <div class="services__cost-line">
-                            <div class="services__cost--day">
-                                от <span class="cost-value">45</span> раб. дней
-                            </div>
-                            <div class="services__cost--price">
-                                от <span class="cost-value">50 000</span> <span class="ruble"></span>
+                    <div class="services__bottom">
+                        <div class="services__middle">
+                            <div class="services__description">
+                                <p>Работает команда архитекторов
+                                    общественных помещений</p>
+                                <ul>
+                                    <li>Концепция</li>
+                                    <li>Рабочая документация</li>
+                                    <li>Комплектация</li>
+                                    <li>Авторский надзор</li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="services__cost">
+                            <div class="services__cost-line">
+                                <div class="services__cost--day">
+                                    от <span class="cost-value">45</span> раб. дней
+                                </div>
+                                <div class="services__cost--price">
+                                    от <span class="cost-value">50 000</span> <span class="ruble"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="services__button" href="#">Заказать дизайн-проект</a>
                     </div>
-                    <a class="services__button" href="#">Заказать дизайн-проект</a>
                 </div>
             </div>
 
@@ -257,29 +285,103 @@
                 <div class="services__card">
                     <div class="services__top">
                         <div class="services__name">Частичное изменение<br /> офиса</div>
+                        <span class="services__arrow"></span>
                     </div>
-                    <div class="services__middle">
-                        <div class="services__description">
-                            <ul>
-                                <li>Поменяв не более 30% офисных
-                                    решений, визуально обновим
-                                    ваш офис.</li>
-                            </ul>
-                            <div class="services__hint">
-                                <span class="red-start">*</span>Стоимость услуг может меняться в
-                                зависимости от особенностей проекта
+                    <div class="services__bottom">
+                        <div class="services__middle">
+                            <div class="services__description">
+                                <ul>
+                                    <li>Поменяв не более 30% офисных
+                                        решений, визуально обновим
+                                        ваш офис.</li>
+                                </ul>
+                                <div class="services__hint">
+                                    <span class="red-start">*</span>Стоимость услуг может меняться в
+                                    зависимости от особенностей проекта
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="services__cost">
-                        <div class="services__cost-one">
-                            Стоимость и срок индивидуальны
+                        <div class="services__cost">
+                            <div class="services__cost-one">
+                                Стоимость и срок индивидуальны
+                            </div>
                         </div>
+                        <a class="services__button" href="#" data-goto=".calculator">Калькулятор услуг</a>
                     </div>
-                    <a class="services__button" href="#">Калькулятор услуг</a>
                 </div>
             </div>
 
+        </div>
+    </div>
+</div>
+
+<div class="scheme-work">
+    <div class="container">
+        <div class="caption">Как это работает</div>
+        <div class="scheme-work__row">
+            <div class="scheme-work__box howwork-slider">
+                <div class="scheme-work__item-box scheme-work__item-box--1">
+                    <div class="scheme-work__item scheme-work__item--application">
+                        <div class="scheme-work__name">Заявка</div>
+                        <div class="scheme-work__value">
+                            Оставьте заявку на<br />
+                            сайте или позвоните<br />
+                            (812) 777-95-43
+                        </div>
+                    </div>
+                </div>
+                <div class="scheme-work__item-box scheme-work__item-box--2">
+                    <div class="scheme-work__item scheme-work__item--meet">
+                        <div class="scheme-work__name">Назначаем встречу</div>
+                        <div class="scheme-work__value">
+                            Менеджер и проектировщик<br />
+                            приедут в удобное для вас<br />
+                            место и время
+                        </div>
+                    </div>
+                </div>
+                <div class="scheme-work__item-box scheme-work__item-box--3">
+                    <div class="scheme-work__item scheme-work__item--meeting">
+                        <div class="scheme-work__name">Встреча</div>
+                        <div class="scheme-work__value">
+                            Обсуждаем детали и<br />
+                            ваши пожелания
+                        </div>
+                    </div>
+                </div>
+                <div class="scheme-work__item-box scheme-work__item-box--4">
+                    <div class="scheme-work__item scheme-work__item--tz">
+                        <div class="scheme-work__name"> Готовим ТЗ</div>
+                        <div class="scheme-work__value">
+                            Заключаем договор,<br />
+                            проводим оплату
+                        </div>
+                    </div>
+                </div>
+                <div class="scheme-work__item-box scheme-work__item-box--5">
+                    <div class="scheme-work__item scheme-work__item--rent">
+                        <div class="scheme-work__name"> Сдаем проект</div>
+                        <div class="scheme-work__value">
+                            Вносим правки до<br />
+                            полного согласования
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="information">
+    <div class="container">
+        <div class="information__box">
+            <div class="information__icon"></div>
+            <div class="information__text">
+                <div>
+                    <span class="information__bold">Вы получаете</span> проект помещения, профессиональное сопровождение работ и рекомендации
+                    архитектора-проектировщика на всех этапах
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -519,7 +621,9 @@
             </div>
         </div>
 
-        <div class="contacts__map-box"></div>
+        <div class="contacts__map-box">
+            <div id="map-"></div>
+        </div>
 
         <div class="photo-box photo-slider">
             <div class="photo-box__item">
@@ -584,12 +688,54 @@
             <div class="footer__right">
                 <div class="footer__grid">
                     <div class="footer__privacy"><a href="#">Политика конфеденциальности</a></div>
-                    <div class="footer__callback"><a href="#" class="btn-b">Заказать звонок</a></div>
+                    <div class="footer__callback"><a class="btn-b open-popup-link" href="#callback">Заказать звонок</a></div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+
+
+<div style="display: none">
+
+    <div id="callback" class="form-callback xform">
+        <div class="xform__caption">Заполните форму,<br />
+            чтобы заказать дизайн-проект</div>
+        <form action="">
+            <div class="xform__group">
+                <div class="xform__item">
+                    <input type="text" name="name" placeholder="ФИО">
+                </div>
+            </div>
+
+            <div class="xform__group">
+                <div class="xform__item">
+                    <input type="text" name="name" placeholder="Телефон">
+                </div>
+            </div>
+
+            <div class="xform__group">
+                <div class="xform__item">
+                    <textarea name="message" placeholder="Опишите Ваш проект"></textarea>
+                </div>
+            </div>
+
+            <div class="xform__group">
+                <label class="check-custom">
+                    <input class="checkbox" name="plan" type="checkbox">
+                    <span class="checkbox-custom"></span>
+                    <span class="label">Согласие на обработку личных данных</span>
+                </label>
+            </div>
+
+            <div class="xform__button">
+                <button class="btn">Заказать дизайн-проект</button>
+            </div>
+
+        </form>
+    </div>
 
 
 //= include/footer.html
