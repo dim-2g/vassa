@@ -31,14 +31,19 @@ a{
   color: $biruza;
   outline: none;
 }
-
+input[type="text"]:focus{
+  border-color: rgba(0, 138, 155, 0.5);
+}
+textarea:focus{
+  border-color: rgba(0, 138, 155, 0.5);
+}
 
 
 .header{
   position: relative;
   margin-top: 52px;
   padding-bottom: 15px;
-  @media($bp-larger-than-mobile){
+  @media($bp-larger-than-desktop){
     margin-top: 0;
     min-height: 600px;
     padding-bottom: inherit;
@@ -46,7 +51,7 @@ a{
   > .container2{
     padding-left: 0;
     padding-right: 0;
-    @media($bp-larger-than-mobile){
+    @media($bp-larger-than-tablet){
       padding-left: inherit;
       padding-right: inherit;
     }
@@ -61,7 +66,7 @@ a{
     right: 0;
     height: 252px;
     display: none;
-    @media($bp-larger-than-mobile){
+    @media($bp-larger-than-tablet){
       left: 50%;
       right: 0;
       top: 0;
@@ -77,17 +82,21 @@ a{
     margin-left: -15px;
     margin-right: -15px;
     margin-bottom: 15px;
-    @media($bp-larger-than-mobile){
+    @media($bp-larger-than-tablet){
       padding: 0;
       background: 0 none;
       margin: 0;
     }
   }
   &__body{
-    @media($bp-larger-than-mobile){
+    @media($bp-larger-than-tablet){
+      padding-right: 20px;
       width: 50%;
-      padding-right: 70px;
       margin-top: 16px;
+    }
+    @media($bp-larger-than-desktop){
+      padding-right: 70px;
+
     }
   }
   &__caption{
@@ -98,10 +107,15 @@ a{
     line-height: 145%;
     color: #fff;
     @media($bp-larger-than-mobile){
-      font-size: 33px;
-      color: inherit;
+      font-size: 26px;
       line-height: 130%;
       margin-bottom: 6px;
+    }
+    @media($bp-larger-than-desktop){
+      font-size: 33px;
+    }
+    @media($bp-larger-than-tablet){
+      color: inherit;
     }
   }
   &__subcaption{
@@ -111,8 +125,13 @@ a{
     line-height: 130%;
     color: #fff;
     @media($bp-larger-than-mobile){
-      font-size: 18px;
+      font-size: 14px;
+    }
+    @media($bp-larger-than-tablet){
       color: inherit;
+    }
+    @media($bp-larger-than-desktop){
+      font-size: 18px;
     }
   }
   &__item{
@@ -128,12 +147,15 @@ a{
     line-height: 140%;
     font-size: 12px;
     @media($bp-larger-than-mobile){
-      font-size: 16px;
+      font-size: 14px;
       padding: 4px 30px 8px;
       letter-spacing: 1px;
       height: 75px;
       margin-bottom: 20px;
       line-height: 130%;
+    }
+    @media($bp-larger-than-desktop){
+      font-size: 16px;
     }
     &:before{
       width: 16px;
@@ -474,6 +496,11 @@ a{
     a{
       color: #fff;
       font-size: 12px;
+      font-family:FuturaFuturisCBold;
+      @media($bp-larger-than-mobile){
+        font-size: 16px;
+        text-decoration: none;
+      }
       &:hover{
         color: $biruza;
         text-decoration: none;
@@ -731,7 +758,11 @@ a{
       font-size: 14px;
       color: #333333;
       &:focus{
-        box-shadow: 0 0 4px 2px rgba(0, 138, 155, 0.5);
+        //box-shadow: 0 0 4px 2px rgba(0, 138, 155, 0.5);
+        border-color: rgba(0, 138, 155, 0.5);
+      }
+      &.error{
+        border-color: $red;
       }
     }
     textarea{
@@ -743,7 +774,12 @@ a{
       height: 138px;
       resize: none;
       &:focus{
-        box-shadow: 0 0 4px 2px rgba(0, 138, 155, 0.5);
+        //box-shadow: 0 0 4px 2px rgba(0, 138, 155, 0.5);
+        //border-color: $biruza;
+        border-color: rgba(0, 138, 155, 0.5);
+      }
+      &.error{
+        border-color: $red;
       }
     }
   }
@@ -761,6 +797,25 @@ a{
       width: 100%;
       font-size: 14px;
       font-family: FuturaFuturisCBold;
+    }
+  }
+}
+
+#jGrowl{
+  .af-message-error{
+    background-color: $red !important;
+
+  }
+  .jGrowl-notification{
+    padding: 15px;
+    border-radius: 0;
+    width: 280px;
+    font-weight: bold;
+    font-size: 12px !important;
+    line-height: 150% !important;
+    @media($bp-larger-than-mobile) {
+      width: 360px;
+      font-size: 14px !important;
     }
   }
 }

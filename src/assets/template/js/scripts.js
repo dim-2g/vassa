@@ -41,6 +41,19 @@ $(function() {
         $('html, body').animate({ scrollTop: $(selector).offset().top}, 1200);
     });
 
+    $('body').on('click', '.order-design', function(e) {
+        e.preventDefault();
+        $('[name="plan"]').prop("checked", true);
+        $('[name="concept"]').prop("checked", true);
+        $('[name="doc"]').prop("checked", true);
+        $('[name="complect"]').prop("checked", true);
+        $('[name="nadzor"]').prop("checked", true);
+
+        selector = '.calculator';
+        $('html, body').animate({ scrollTop: $(selector).offset().top}, 1200);
+    });
+
+
     initPeopleSlider();
     initPhotoSlider();
     initHowWorkSlider();

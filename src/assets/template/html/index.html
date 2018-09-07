@@ -416,7 +416,7 @@
 
                 <div class="calculator__check-box">
                     <label class="check-custom">
-                        <input class="checkbox" name="plan" type="checkbox">
+                        <input class="checkbox" name="concept" type="checkbox">
                         <span class="checkbox-custom"></span>
                         <span class="label">
                             <span class="label__caption">Концепция</span>
@@ -428,7 +428,7 @@
 
                 <div class="calculator__check-box">
                     <label class="check-custom">
-                        <input class="checkbox" name="plan" type="checkbox">
+                        <input class="checkbox" name="doc" type="checkbox">
                         <span class="checkbox-custom"></span>
                         <span class="label">
                             <span class="label__caption">Рабочая документация</span>
@@ -440,7 +440,7 @@
 
                 <div class="calculator__check-box">
                     <label class="check-custom">
-                        <input class="checkbox" name="plan" type="checkbox">
+                        <input class="checkbox" name="complect" type="checkbox">
                         <span class="checkbox-custom"></span>
                         <span class="label">
                             <span class="label__caption">Комплектация</span>
@@ -452,7 +452,7 @@
 
                 <div class="calculator__check-box">
                     <label class="check-custom">
-                        <input class="checkbox" name="plan" type="checkbox">
+                        <input class="checkbox" name="nadzor" type="checkbox">
                         <span class="checkbox-custom"></span>
                         <span class="label">
                             <span class="label__caption">Авторский надзор с выездом на объект</span>
@@ -467,21 +467,20 @@
 
                 <div class="select-box">
                     <div class="select-box__label">Метраж*</div>
-                    <select name="" class="styled">
-                        <option value="">от 20 - 55 м.кв.</option>
-                        <option value="">от 56 - 100 м.кв.</option>
-                        <option value="">от 101 - 200 м.кв.</option>
-                        <option value="">от 201 - 1000 м.кв.</option>
+                    <select name="group" class="styled">
+                        <option value="1">50 – 499 м.кв.</option>
+                        <option value="2">500 – 999 м.кв.</option>
+                        <option value="3">1000 кв.м.</option>
                     </select>
                 </div>
 
                 <div class="calculator__comment-box">
                     <div class="calculator__block-label">Ваш комментарий</div>
-                    <textarea class="calculator__comment" name=""></textarea>
+                    <textarea class="calculator__comment" name="comment"></textarea>
                 </div>
 
                 <div class="calculator__submit-box">
-                    <a href="#" class="calculator__submit btn">Рассчитать</a>
+                    <a href="#" class="calculator__submit btn calc-start">Рассчитать</a>
                 </div>
                 <div class="calculator__reset-box">
                     <a href="#" class="calculator__reset">Сбросить</a>

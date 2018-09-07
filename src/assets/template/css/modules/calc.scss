@@ -271,6 +271,9 @@ $checkboxSizeAgree: 15px;
     color: $biruza;
     line-height: 100%;
   }
+  .checkbox.error + .checkbox-custom {
+    border-color: $red;
+  }
 }
 
 .c-result{
@@ -299,6 +302,9 @@ $checkboxSizeAgree: 15px;
     &:last-child{
       margin-bottom: 0;
     }
+  }
+  &__empty{
+    font-size: 12px;
   }
   &__label{
     color: #333333;
@@ -378,6 +384,12 @@ $checkboxSizeAgree: 15px;
     background-color: #fff;
     border: 1px solid #e8e8e8;
     padding-left: 15px;
+    &.error{
+      border-color: $red;
+      &:focus{
+        border-color: $red;
+      }
+    }
   }
   &__item{
     margin-bottom: 14px;
@@ -453,7 +465,7 @@ $checkboxSizeAgree: 15px;
         font-size: 12px;
         @media($bp-larger-than-mobile) {
           margin: 6px 0 28px;
-          line-height: inherit;
+          line-height: 150%;
           font-size: inherit;
         }
       }
@@ -1232,8 +1244,10 @@ p.regards{
     justify-content: center;
     margin-top: 34px;
     flex-direction: column;
-    @media($bp-larger-than-mobile) {
+    align-items: center;
+    @media($bp-larger-than-desktop) {
       flex-direction: row;
+      align-items: inherit;
     }
   }
   &__item{
@@ -1241,6 +1255,7 @@ p.regards{
     padding-right: 15px;
     color: #333333;
     width: 100%;
+    max-width: 390px;
     &--concepcia{
       .services__name{
         &:before{
@@ -1284,7 +1299,6 @@ p.regards{
   }
   &__card{
     box-shadow: 2px 0px 8px 2px rgba(0, 138, 155, 0.07);
-    max-width: 356px;
     background-color: #fff;
     border-radius: 3px;
     overflow: hidden;
@@ -1335,7 +1349,7 @@ p.regards{
   }
   &__bottom{
     display: none;
-    @media($bp-larger-than-tablet) {
+    @media($bp-larger-than-desktop) {
       display: inherit;
     }
   }
@@ -1351,7 +1365,7 @@ p.regards{
     margin-top: -7px;
     transform: rotate(90deg);
     transition: $cubic;
-    @media($bp-larger-than-tablet) {
+    @media($bp-larger-than-desktop) {
       display: none;
     }
     &:after{
