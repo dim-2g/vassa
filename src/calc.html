@@ -309,8 +309,8 @@
                  */
                 applyElementOffset: function () {
                     this._$element.css({
-                        left: -(this._$element[0].offsetWidth) + 15,
-                        top: -(this._$element[0].offsetHeight / 2) - 20
+                        left: -(this._$element[0].offsetWidth) - 20,
+                        top: -(this._$element[0].offsetHeight / 2) - 10
                     });
                 },
 
@@ -386,7 +386,7 @@
                 iconImageSize: [42, 42],
                 // Смещение левого верхнего угла иконки относительно
                 // её "ножки" (точки привязки).
-                iconImageOffset: [-5, -38],
+                iconImageOffset: [-42, -25],
                 pane: 'balloon'
             });
         map.geoObjects.add(placemark);

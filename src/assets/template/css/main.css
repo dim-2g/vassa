@@ -1185,7 +1185,7 @@ textarea:focus {
       .calculator__box {
         margin-left: -15px;
         margin-right: -15px; } }
-    @media (min-width: 1368px) {
+    @media (min-width: 1000px) {
       .calculator__box {
         align-items: flex-start;
         flex-direction: row;
@@ -1537,7 +1537,7 @@ textarea:focus {
     margin-bottom: 16px; }
     @media (min-width: 400px) {
       .how-works .subcaption {
-        margin-bottom: inherit; } }
+        margin-bottom: 40px; } }
   .how-works__box {
     margin-left: -15px;
     margin-right: -15px;
@@ -1641,7 +1641,9 @@ textarea:focus {
     @media (min-width: 400px) {
       .people-slider .slick-next {
         top: 138px;
-        right: 0; } }
+        right: 0;
+        width: 30px;
+        height: 30px; } }
     .people-slider .slick-next:hover {
       background-color: #008a9b;
       color: #fff;
@@ -1671,7 +1673,9 @@ textarea:focus {
     @media (min-width: 400px) {
       .people-slider .slick-prev {
         top: 138px;
-        left: 0; } }
+        left: 0;
+        width: 30px;
+        height: 30px; } }
     .people-slider .slick-prev:hover {
       background-color: #008a9b;
       border-color: #008a9b; }
